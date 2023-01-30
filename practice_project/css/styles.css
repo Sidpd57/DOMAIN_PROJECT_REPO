@@ -51,8 +51,18 @@ a:active {
 section {
     margin: 4rem 5rem;
     padding: 2rem;
-    background-color: hsla(0, 0%, 20%, 0.228);
     border-radius: 0.5rem;
+}
+
+.sec_1 {
+    background-color: rgba(172, 255, 47, 0.393);
+    margin-top: 0;
+}
+.sec_2 {
+    background-color: hsla(0, 0%, 20%, 0.228);
+}
+.sec_3 {
+    background-color: hsla(0, 98%, 67%, 0.228);
 }
 
 article{
@@ -78,5 +88,22 @@ article{
 
 p {
     padding: inherit;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+}
+
+.footer ul {
+    background-color: gray;
 }
 
