@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:'Courier New', Courier, monospace;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-auto-rows: 75px auto 75px;
+    column-gap: 0.5rem;
+    grid-template-areas: 
+        "hd hd hd hd hd hd hd hd hd"
+        "sb sb mn mn mn mn mn mn mn"
+        "ft ft ft ft ft ft ft ft ft";
+  }
+
+  .el {
+    background-color: rebeccapurple;
+    color: #fff;
+    display: grid;
+    place-content: center;
+  }
+
+  .header {
+    grid-area: hd;
+  }
+
+  .sidebar {
+    grid-area: sb;
+    background-color: blue;
+  }
+
+  .footer {
+    grid-area: ft;
+  }
+
+.container {
+    display: grid;
+    grid-area: mn;
+    min-height: 400px;
+    /* grid-auto-flow: column; */
+    /* grid-template-columns: 2fr 3fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(2,1fr 2fr 3fr); */
+    grid-template-rows: repeat(2, 1fr 2fr);
+    /* grid-auto-columns: ; */
+    grid-auto-rows: minmax(200px, auto);
+    gap: 0.5rem;
+    /* row-gap: ;
+    column-gap: ; */
+}
+
+.item {
+    background-color: black;
+    color: white;
+}
+
+.item:first-child {
+    background-color: yellow;
+    grid-row: 1/3;
+    grid-column: 1/4;
+
+    /* for inner content of item  */
+    display: grid;
+    place-content: start center;
+}
+
+.item:nth-child(2){
+    background-color: purple;
+    grid-row: 3/4;
+    grid-column: 1/5;
+
+    /* for inner content of item  */
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
